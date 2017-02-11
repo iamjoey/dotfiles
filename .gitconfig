@@ -1,0 +1,25 @@
+# This is Git's per-user configuration file.
+[user]
+    name = Joey Hallie
+    email = joey@webonweb.nl
+[alias]
+       gst = status
+[core]
+    filemode = false
+    excludesfile = /Users/joey/.gitignore_global
+[difftool "sourcetree"]
+    cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+    path =
+[mergetool "sourcetree"]
+    cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+    trustExitCode = true
+[push]
+    default = matching
+[credential]
+    helper = osxkeychain
+[color]
+    ui = true
+[filter "lfs"]
+    required = true
+    clean = git-lfs clean %f
+    smudge = git-lfs smudge %f
